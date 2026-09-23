@@ -1,0 +1,3550 @@
+/* =========================================================
+   BABY SHOWER - MELODY ELIANNA
+   ESTILOS PRINCIPALES
+========================================================= */
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+  --pink-50: #fff8fa;
+  --pink-100: #fdeef3;
+  --pink-200: #f8d8e3;
+  --pink-300: #efb9cc;
+  --pink-400: #df8fac;
+  --pink-500: #d76b91;
+  --pink-600: #c4537d;
+
+  --gold-300: #d8bd82;
+  --gold-400: #c6a15b;
+  --gold-500: #b68a2d;
+
+  --cream: #fffaf6;
+  --ivory: #fffdf9;
+
+  --brown-500: #79535d;
+  --brown-600: #67414b;
+  --brown-700: #53343d;
+
+  --gray-500: #8a7b7f;
+
+  --shadow-soft: 0 12px 40px rgba(125, 77, 92, 0.12);
+
+  --shadow-card: 0 18px 50px rgba(125, 77, 92, 0.16);
+
+  --radius-lg: 32px;
+  --radius-md: 22px;
+  --radius-sm: 14px;
+
+  --transition: 0.35s ease;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  color: var(--brown-700);
+
+  background: linear-gradient(180deg, #fff9fa 0%, #fff4f7 45%, #fffaf7 100%);
+
+  overflow-x: hidden;
+}
+
+body.page-locked {
+  overflow: hidden;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   PORTADA
+========================================================= */
+
+.cover {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100svh;
+  padding: max(28px, env(safe-area-inset-top)) 24px
+    max(28px, env(safe-area-inset-bottom));
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.95),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 80% 85%,
+      rgba(239, 185, 204, 0.28),
+      transparent 36%
+    ),
+    linear-gradient(145deg, #fffaf8 0%, #fdeef3 48%, #f9dce6 100%);
+
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease,
+    transform 0.8s ease;
+}
+
+/* Marco dorado interior */
+
+.cover::after {
+  content: "";
+
+  position: absolute;
+  inset: 16px;
+
+  border: 1px solid rgba(182, 138, 45, 0.5);
+  border-radius: 32px;
+
+  pointer-events: none;
+}
+
+/* Decoraciones */
+
+.cover-decoration {
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(248, 216, 227, 0.7) 45%,
+    transparent 72%
+  );
+
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+.cover-decoration-top {
+  top: -140px;
+  right: -100px;
+}
+
+.cover-decoration-bottom {
+  bottom: -150px;
+  left: -110px;
+}
+
+/* Contenido */
+
+.cover-content {
+  position: relative;
+  z-index: 5;
+
+  width: min(100%, 620px);
+
+  text-align: center;
+}
+
+/* Frase superior */
+
+.cover-kicker {
+  margin-bottom: 16px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(1.35rem, 4vw, 1.85rem);
+  font-weight: 600;
+  line-height: 1.25;
+
+  letter-spacing: 0.025em;
+
+  color: var(--brown-600);
+}
+
+/* Baby Shower */
+
+.cover-title {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(2.8rem, 8vw, 5rem);
+  font-weight: 700;
+  line-height: 0.98;
+
+  color: var(--gold-500);
+
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* Separador */
+
+.cover-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  width: min(280px, 80%);
+  margin: 20px auto 12px;
+}
+
+.cover-divider > span:not(.cover-heart) {
+  display: block;
+
+  width: 90px;
+  height: 1px;
+
+  background: linear-gradient(90deg, transparent, var(--gold-400));
+}
+
+.cover-divider > span:last-child {
+  background: linear-gradient(90deg, var(--gold-400), transparent);
+}
+
+.cover-heart {
+  color: var(--pink-500);
+  font-size: 1.2rem;
+}
+
+/* Nombre */
+
+.cover-name {
+  margin-top: 2px;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(4rem, 12vw, 7rem);
+  font-weight: 400;
+  line-height: 0.82;
+
+  color: var(--pink-500);
+
+  text-shadow: 0 3px 15px rgba(215, 107, 145, 0.12);
+}
+
+.cover-name span {
+  display: block;
+
+  margin-top: 12px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 0.4em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  color: var(--brown-600);
+}
+
+/* Fecha */
+
+.cover-date {
+  margin-top: 28px;
+
+  font-size: clamp(1.2rem, 3vw, 1.45rem);
+  font-weight: 600;
+
+  color: var(--brown-600);
+}
+
+/* Papás */
+
+.cover-parents {
+  margin-top: 8px;
+  margin-bottom: 26px;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(2rem, 5vw, 2.7rem);
+
+  color: var(--pink-500);
+}
+
+/* Botón abrir */
+
+.btn-open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  min-width: 210px;
+
+  padding: 14px 28px;
+
+  border: 1px solid var(--gold-400);
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, var(--pink-500), var(--pink-400));
+
+  box-shadow: 0 12px 30px rgba(215, 107, 145, 0.28);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    filter var(--transition);
+}
+
+.btn-open:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 16px 38px rgba(215, 107, 145, 0.35);
+
+  filter: brightness(1.03);
+}
+
+.btn-open:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-open-icon {
+  font-size: 1.05rem;
+}
+
+/* Portada abierta */
+
+.cover.is-open {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: scale(1.035);
+}
+
+/* =========================================================
+   CONTENIDO GENERAL
+========================================================= */
+
+.invitation-content {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: linear-gradient(180deg, #fffaf8 0%, #fff5f8 45%, #fffaf8 100%);
+}
+
+.section {
+  position: relative;
+
+  padding: 90px 24px;
+
+  text-align: center;
+}
+
+.section:nth-of-type(even) {
+  background: linear-gradient(
+    180deg,
+    rgba(253, 238, 243, 0.55),
+    rgba(255, 250, 248, 0.85)
+  );
+}
+
+.section-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 920px);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TÍTULOS
+========================================================= */
+
+.section-eyebrow {
+  margin-bottom: 10px;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.76rem;
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+
+  color: var(--gold-500);
+}
+
+.section-title {
+  margin-bottom: 18px;
+
+  font-size: clamp(2.5rem, 7vw, 4.3rem);
+  font-weight: 600;
+  line-height: 1;
+
+  color: var(--brown-600);
+}
+
+.script-title {
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(3.5rem, 9vw, 5.8rem);
+  font-weight: 400;
+
+  color: var(--pink-500);
+}
+
+.full-name {
+  margin-top: -8px;
+
+  font-size: clamp(1.15rem, 3vw, 1.45rem);
+  font-weight: 600;
+
+  color: var(--brown-500);
+}
+
+/* =========================================================
+   TEXTOS
+========================================================= */
+
+.section-text {
+  width: min(100%, 680px);
+
+  margin: 0 auto 20px;
+
+  font-size: clamp(1.25rem, 3.2vw, 1.55rem);
+  line-height: 1.65;
+
+  color: var(--brown-500);
+}
+
+.section-text-highlight {
+  font-weight: 600;
+
+  color: var(--pink-600);
+}
+
+.welcome-text {
+  margin-top: 20px;
+}
+
+/* =========================================================
+   DIVISORES
+========================================================= */
+
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 24px auto;
+
+  color: var(--gold-500);
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: "";
+
+  width: 70px;
+  height: 1px;
+
+  background: linear-gradient(90deg, transparent, var(--gold-300));
+}
+
+.ornament-divider::after {
+  background: linear-gradient(90deg, var(--gold-300), transparent);
+}
+
+.ornament-divider span {
+  margin: 0 12px;
+
+  font-size: 1.3rem;
+
+  color: var(--pink-500);
+}
+
+/* =========================================================
+   FOTOGRAFÍAS
+========================================================= */
+
+.photo-card {
+  width: min(100%, 540px);
+
+  margin: 44px auto 0;
+}
+
+.photo-frame {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 8px;
+
+  border: 1px solid rgba(198, 161, 91, 0.65);
+
+  border-radius: var(--radius-lg);
+
+  background: linear-gradient(145deg, #ffffff, #fff3f6);
+
+  box-shadow: var(--shadow-card);
+}
+
+.photo-frame::after {
+  content: "";
+
+  position: absolute;
+  inset: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  border-radius: calc(var(--radius-lg) - 8px);
+
+  pointer-events: none;
+}
+
+.photo-frame img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: calc(var(--radius-lg) - 10px);
+
+  object-fit: cover;
+}
+
+.photo-frame-portrait {
+  width: min(100%, 430px);
+
+  margin: 0 auto;
+}
+
+.photo-caption {
+  width: min(100%, 520px);
+
+  margin: 24px auto 0;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  line-height: 1.2;
+
+  color: var(--pink-500);
+}
+
+/* =========================================================
+   PAPÁS
+========================================================= */
+
+.parents-names {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 24px;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+
+  color: var(--pink-500);
+}
+
+.parents-ampersand {
+  color: var(--gold-500);
+}
+
+/* =========================================================
+   CUENTA REGRESIVA
+========================================================= */
+
+.countdown {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(95px, 1fr));
+
+  gap: 18px;
+
+  width: min(100%, 680px);
+
+  margin: 40px auto 0;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 125px;
+
+  padding: 18px 10px;
+
+  border: 1px solid rgba(198, 161, 91, 0.45);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  box-shadow: 0 10px 30px rgba(125, 77, 92, 0.08);
+}
+
+.countdown-item span {
+  font-size: clamp(2.1rem, 5vw, 3rem);
+  font-weight: 600;
+  line-height: 1;
+
+  color: var(--pink-500);
+}
+
+.countdown-item small {
+  margin-top: 8px;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.72rem;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--brown-500);
+}
+
+.countdown-finished {
+  margin-top: 30px;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: 2.5rem;
+
+  color: var(--pink-500);
+}
+
+/* =========================================================
+   EVENTO
+========================================================= */
+
+.event-card {
+  width: min(100%, 470px);
+
+  margin: 24px auto;
+
+  padding: 28px 24px;
+
+  border: 1px solid rgba(198, 161, 91, 0.4);
+
+  border-radius: var(--radius-md);
+
+  background: rgba(255, 255, 255, 0.82);
+
+  box-shadow: var(--shadow-soft);
+}
+
+.event-icon {
+  margin-bottom: 8px;
+
+  font-size: 2rem;
+}
+
+.event-label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--gold-500);
+}
+
+.event-card strong {
+  display: block;
+
+  font-size: clamp(1.35rem, 3vw, 1.7rem);
+
+  color: var(--brown-600);
+}
+
+/* =========================================================
+   UBICACIÓN
+========================================================= */
+
+.location-card {
+  width: min(100%, 620px);
+
+  margin: 36px auto 0;
+
+  padding: 38px 30px;
+
+  border: 1px solid rgba(198, 161, 91, 0.45);
+
+  border-radius: var(--radius-lg);
+
+  background: rgba(255, 255, 255, 0.84);
+
+  box-shadow: var(--shadow-card);
+}
+
+.location-pin {
+  margin-bottom: 12px;
+
+  font-size: 2.4rem;
+}
+
+.location-card h3 {
+  margin-bottom: 10px;
+
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+
+  color: var(--pink-500);
+}
+
+.location-card p {
+  margin-bottom: 16px;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  color: var(--brown-500);
+}
+
+.location-card address {
+  margin-bottom: 28px;
+
+  font-size: 1.15rem;
+  font-style: normal;
+  line-height: 1.7;
+
+  color: var(--gray-500);
+}
+
+/* =========================================================
+   BOTONES GENERALES
+========================================================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 48px;
+
+  padding: 13px 26px;
+
+  border: none;
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, var(--pink-500), var(--pink-400));
+
+  box-shadow: 0 10px 26px rgba(215, 107, 145, 0.25);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 14px 30px rgba(215, 107, 145, 0.32);
+}
+
+/* =========================================================
+   CONFIRMACIÓN
+========================================================= */
+
+.confirmation-form {
+  width: min(100%, 520px);
+
+  margin: 38px auto 0;
+
+  padding: 34px 30px;
+
+  border: 1px solid rgba(198, 161, 91, 0.42);
+
+  border-radius: var(--radius-lg);
+
+  text-align: left;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  box-shadow: var(--shadow-card);
+}
+
+.form-group {
+  margin-bottom: 26px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  color: var(--brown-600);
+}
+
+.form-group input[type="text"] {
+  width: 100%;
+  height: 50px;
+
+  padding: 0 16px;
+
+  border: 1px solid rgba(182, 138, 45, 0.4);
+
+  border-radius: var(--radius-sm);
+
+  outline: none;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.92rem;
+
+  color: var(--brown-700);
+
+  background: #ffffff;
+
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.form-group input[type="text"]:focus {
+  border-color: var(--pink-400);
+
+  box-shadow: 0 0 0 4px rgba(215, 107, 145, 0.1);
+}
+
+.form-error {
+  display: block;
+
+  min-height: 18px;
+
+  margin-top: 6px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.72rem;
+
+  color: #b94d67;
+}
+
+/* Contador asistentes */
+
+.guest-counter {
+  display: grid;
+
+  grid-template-columns: 52px 1fr 52px;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(182, 138, 45, 0.4);
+
+  border-radius: 999px;
+
+  background: #ffffff;
+}
+
+.counter-button {
+  height: 50px;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 1.7rem;
+
+  color: var(--pink-500);
+
+  background: transparent;
+}
+
+.counter-button:hover {
+  background: rgba(248, 216, 227, 0.35);
+}
+
+#guestCount {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  text-align: center;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: var(--brown-600);
+
+  background: transparent;
+}
+
+.btn-confirm {
+  width: 100%;
+}
+
+.form-status {
+  min-height: 20px;
+
+  margin-top: 14px;
+
+  text-align: center;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.78rem;
+}
+
+/* Confirmación correcta */
+
+.confirmation-success {
+  width: min(100%, 520px);
+
+  margin: 30px auto 0;
+
+  padding: 34px 26px;
+
+  border: 1px solid rgba(198, 161, 91, 0.4);
+
+  border-radius: var(--radius-lg);
+
+  background: linear-gradient(145deg, #ffffff, #fff1f5);
+
+  box-shadow: var(--shadow-soft);
+}
+
+.success-icon {
+  margin-bottom: 10px;
+
+  font-size: 2.5rem;
+
+  color: var(--pink-500);
+}
+
+.confirmation-success h3 {
+  margin-bottom: 8px;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: 3rem;
+  font-weight: 400;
+
+  color: var(--pink-500);
+}
+
+.confirmation-success p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   DESPEDIDA
+========================================================= */
+
+.section-farewell {
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+
+  background: radial-gradient(circle at center, #fffdf9 0%, #fdeef3 70%);
+}
+
+.farewell-message {
+  width: min(100%, 620px);
+
+  margin: 0 auto 18px;
+
+  font-size: clamp(1.3rem, 3vw, 1.65rem);
+  line-height: 1.6;
+
+  color: var(--brown-500);
+}
+
+.farewell-message-highlight {
+  margin-top: 14px;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+
+  color: var(--pink-500);
+}
+
+.farewell-signature {
+  margin-top: 30px;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+
+  color: var(--gold-500);
+}
+
+/* =========================================================
+   BOTÓN FLOTANTE DE MÚSICA
+========================================================= */
+
+.music-toggle {
+  position: fixed;
+
+  right: 22px;
+  bottom: 22px;
+
+  z-index: 900;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 54px;
+  height: 54px;
+
+  border: 1px solid rgba(198, 161, 91, 0.7);
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, var(--pink-500), var(--pink-400));
+
+  box-shadow: 0 10px 26px rgba(120, 70, 85, 0.25);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.music-toggle:hover {
+  transform: scale(1.07);
+}
+
+.music-toggle span {
+  font-size: 1.4rem;
+}
+
+/* =========================================================
+   ELEMENTOS OCULTOS
+========================================================= */
+
+[hidden] {
+  display: none !important;
+}
+
+/* =========================================================
+   ANIMACIONES DE ENTRADA
+========================================================= */
+
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.is-hidden {
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+/* =========================================================
+   ACCESIBILIDAD
+========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid rgba(215, 107, 145, 0.35);
+
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   PORTADA GRÁFICA V2
+   Elefantita + información
+========================================================= */
+
+.cover-layout {
+  position: relative;
+  z-index: 5;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(380px, 0.92fr);
+  align-items: center;
+
+  gap: clamp(24px, 4vw, 70px);
+
+  width: min(1180px, calc(100vw - 90px));
+  max-height: calc(100svh - 70px);
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   ÁREA VISUAL
+========================================================= */
+
+.cover-visual {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Elefantita principal */
+
+.cover-elephant {
+  display: block;
+
+  width: min(100%, 650px);
+  max-width: 650px;
+  max-height: 76svh;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 18px 28px rgba(113, 73, 84, 0.12));
+
+  animation: elephantFloat 5s ease-in-out infinite;
+}
+
+/* Movimiento muy suave */
+
+@keyframes elephantFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* =========================================================
+   CORAZONES FLOTANTES
+========================================================= */
+
+.cover-floating-heart {
+  position: absolute;
+
+  z-index: 3;
+
+  color: var(--pink-400);
+
+  text-shadow: 0 2px 8px rgba(215, 107, 145, 0.16);
+
+  opacity: 0.8;
+
+  pointer-events: none;
+
+  animation: heartFloat 4s ease-in-out infinite;
+}
+
+.heart-one {
+  top: 13%;
+  right: 4%;
+
+  font-size: 1.4rem;
+}
+
+.heart-two {
+  top: 43%;
+  left: 1%;
+
+  font-size: 1rem;
+
+  animation-delay: 0.8s;
+}
+
+.heart-three {
+  right: 10%;
+  bottom: 12%;
+
+  font-size: 1.1rem;
+
+  animation-delay: 1.6s;
+}
+
+@keyframes heartFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+/* =========================================================
+   INFORMACIÓN DE PORTADA
+========================================================= */
+
+.cover-content {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  max-width: 500px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* Frase superior */
+
+.cover-kicker {
+  margin-bottom: 12px;
+
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  line-height: 1.25;
+}
+
+/* Baby Shower */
+
+.cover-title {
+  font-size: clamp(3.2rem, 5vw, 5rem);
+}
+
+/* Separador */
+
+.cover-divider {
+  margin: 16px auto 10px;
+}
+
+/* Melody */
+
+.cover-name {
+  font-size: clamp(4.4rem, 6.5vw, 6.7rem);
+}
+
+/* Elianna */
+
+.cover-name span {
+  margin-top: 10px;
+
+  font-size: 0.38em;
+}
+
+/* Fecha */
+
+.cover-date {
+  margin-top: 22px;
+
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+}
+
+/* Papás */
+
+.cover-parents {
+  margin-top: 6px;
+  margin-bottom: 22px;
+
+  font-size: clamp(2rem, 3vw, 2.7rem);
+}
+
+/* Botón */
+
+.btn-open {
+  min-width: 220px;
+
+  padding: 14px 30px;
+}
+
+/* =========================================================
+   BIENVENIDA V2
+========================================================= */
+
+.section-welcome {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.95),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #fffaf8 0%, #fff4f7 100%);
+}
+
+/* =========================================================
+   NUBES DECORATIVAS
+========================================================= */
+
+.welcome-clouds {
+  position: absolute;
+
+  right: -120px;
+  bottom: -80px;
+
+  width: min(520px, 50vw);
+
+  opacity: 0.12;
+
+  pointer-events: none;
+}
+
+.welcome-clouds img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.welcome-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 0.9fr);
+
+  align-items: center;
+
+  gap: clamp(40px, 6vw, 90px);
+}
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.welcome-copy {
+  position: relative;
+
+  text-align: center;
+}
+
+.welcome-copy .section-text {
+  width: min(100%, 580px);
+}
+
+/* =========================================================
+   ELEFANTITA SECUNDARIA
+========================================================= */
+
+.welcome-elephant-wrap {
+  width: min(100%, 290px);
+
+  margin: 30px auto 0;
+}
+
+.welcome-elephant {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  filter: drop-shadow(0 14px 24px rgba(113, 73, 84, 0.12));
+
+  animation: welcomeElephantFloat 5s ease-in-out infinite;
+}
+
+@keyframes welcomeElephantFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* =========================================================
+   ULTRASONIDO
+========================================================= */
+
+.welcome-photo-area {
+  position: relative;
+
+  text-align: center;
+}
+
+.ultrasound-frame {
+  position: relative;
+
+  width: min(100%, 500px);
+
+  margin: 0 auto;
+
+  padding: 10px;
+
+  border: 1px solid rgba(198, 161, 91, 0.58);
+
+  border-radius: 32px;
+
+  background: linear-gradient(145deg, #ffffff, #fff0f4);
+
+  box-shadow: 0 22px 55px rgba(125, 77, 92, 0.16);
+}
+
+.ultrasound-frame::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 22px;
+
+  pointer-events: none;
+}
+
+.ultrasound-frame img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 22px;
+}
+
+/* Corona pequeña */
+
+.ultrasound-crown {
+  position: absolute;
+
+  top: -28px;
+  left: 50%;
+
+  z-index: 3;
+
+  transform: translateX(-50%) rotate(-4deg);
+
+  font-size: 2.7rem;
+
+  color: var(--gold-500);
+
+  text-shadow: 0 5px 15px rgba(182, 138, 45, 0.25);
+}
+
+/* Texto bajo la foto */
+
+.welcome-caption {
+  width: min(100%, 500px);
+
+  margin: 24px auto 0;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(2rem, 4vw, 2.8rem);
+
+  line-height: 1.2;
+
+  color: var(--pink-500);
+}
+
+/* =========================================================
+   BIENVENIDA V2.1
+   Corrección de composición
+========================================================= */
+
+.section-welcome {
+  position: relative;
+  overflow: hidden;
+
+  padding-top: 100px;
+  padding-bottom: 110px;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 255, 255, 0.95),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(248, 216, 227, 0.32),
+      transparent 32%
+    ),
+    linear-gradient(180deg, #fffaf8 0%, #fff4f7 100%);
+}
+
+/* =========================================================
+   CONTENIDO EN UNA SOLA COLUMNA
+========================================================= */
+
+.welcome-layout {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0;
+
+  width: min(100%, 860px);
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.welcome-copy {
+  width: 100%;
+  max-width: 720px;
+
+  text-align: center;
+}
+
+.welcome-copy .section-text {
+  width: min(100%, 650px);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================================
+   ELEFANTITA
+========================================================= */
+
+.welcome-elephant-wrap {
+  width: min(100%, 240px);
+
+  margin: 28px auto 42px;
+}
+
+.welcome-elephant {
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   ULTRASONIDO
+========================================================= */
+
+.welcome-photo-area {
+  position: relative;
+
+  width: min(100%, 580px);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.ultrasound-frame {
+  width: min(100%, 520px);
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   FRASE DEL ULTRASONIDO
+========================================================= */
+
+.welcome-caption {
+  width: min(100%, 560px);
+
+  margin: 26px auto 0;
+
+  font-size: clamp(2.1rem, 4vw, 2.9rem);
+
+  line-height: 1.18;
+}
+
+/* =========================================================
+   NUBES MÁS VISIBLES
+========================================================= */
+
+.welcome-clouds {
+  position: absolute;
+
+  right: -70px;
+  bottom: -35px;
+
+  width: 520px;
+
+  opacity: 0.22;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.welcome-clouds img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+}
+
+/* Segunda decoración suave usando pseudo-elemento */
+
+.section-welcome::before {
+  content: "";
+
+  position: absolute;
+
+  top: 80px;
+  left: -120px;
+
+  width: 360px;
+  height: 240px;
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(248, 216, 227, 0.3),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+/* Mantener contenido por encima */
+
+.welcome-layout {
+  position: relative;
+  z-index: 2;
+}
+
+.welcome-elephant-wrap {
+  width: min(100%, 285px);
+  margin: 24px auto 32px;
+}
+
+.welcome-photo-area {
+  margin-top: 0;
+}
+
+.welcome-clouds {
+  opacity: 0.26;
+}
+
+/* =========================================================
+   PAPÁS V2
+========================================================= */
+
+.section-parents {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 75% 25%,
+      rgba(248, 216, 227, 0.28),
+      transparent 32%
+    ),
+    linear-gradient(180deg, #fff5f8 0%, #fffaf8 100%);
+}
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.parents-layout {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  width: min(100%, 900px);
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.parents-copy {
+  width: min(100%, 680px);
+
+  text-align: center;
+}
+
+.parents-copy .section-text {
+  width: min(100%, 620px);
+}
+
+/* =========================================================
+   NOMBRES
+========================================================= */
+
+.parents-names {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin: 6px 0 4px;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(2.4rem, 5vw, 3.7rem);
+
+  line-height: 1.1;
+
+  color: var(--pink-500);
+}
+
+.parents-ampersand {
+  color: var(--gold-500);
+}
+
+/* =========================================================
+   FOTO PRINCIPAL
+========================================================= */
+
+.parents-photo-area {
+  width: min(100%, 520px);
+
+  margin-top: 34px;
+}
+
+.parents-main-photo {
+  position: relative;
+
+  width: 100%;
+
+  padding: 8px;
+
+  border: 1px solid rgba(198, 161, 91, 0.58);
+
+  border-radius: 34px;
+
+  background: linear-gradient(145deg, #ffffff, #fff0f4);
+
+  box-shadow: 0 22px 55px rgba(125, 77, 92, 0.16);
+}
+
+.parents-main-photo::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 13px;
+
+  z-index: 2;
+
+  border: 1px solid rgba(255, 255, 255, 0.72);
+
+  border-radius: 24px;
+
+  pointer-events: none;
+}
+
+.parents-main-photo img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 26px;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   OSITOS
+========================================================= */
+
+.parents-bears-wrap {
+  width: min(100%, 340px);
+
+  margin: 24px auto 0;
+}
+
+.parents-bears {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  filter: drop-shadow(0 14px 24px rgba(113, 73, 84, 0.12));
+
+  animation: bearsFloat 5.5s ease-in-out infinite;
+}
+
+@keyframes bearsFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* =========================================================
+   DULCE ESPERA V2
+========================================================= */
+
+.section-sweet-wait {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(248, 216, 227, 0.34),
+      transparent 34%
+    ),
+    linear-gradient(180deg, #fffaf8 0%, #fff3f6 100%);
+}
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.sweetwait-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(320px, 0.9fr)
+    minmax(0, 1.1fr);
+
+  align-items: center;
+
+  gap: clamp(45px, 7vw, 100px);
+
+  width: min(100%, 980px);
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.sweetwait-copy {
+  position: relative;
+
+  z-index: 3;
+
+  text-align: center;
+}
+
+.sweetwait-copy .section-text {
+  width: min(100%, 540px);
+}
+
+.sweetwait-message {
+  width: min(100%, 520px);
+
+  margin: 20px auto 0;
+
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+
+  line-height: 1.6;
+
+  color: var(--brown-500);
+}
+
+/* =========================================================
+   FOTO
+========================================================= */
+
+.sweetwait-photo-area {
+  position: relative;
+
+  z-index: 3;
+
+  text-align: center;
+}
+
+.sweetwait-photo {
+  position: relative;
+
+  width: min(100%, 430px);
+
+  margin: 0 auto;
+
+  padding: 8px;
+
+  border: 1px solid rgba(198, 161, 91, 0.58);
+
+  border-radius: 34px;
+
+  background: linear-gradient(145deg, #ffffff, #fff0f4);
+
+  box-shadow: 0 22px 55px rgba(125, 77, 92, 0.16);
+}
+
+.sweetwait-photo::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.72);
+
+  border-radius: 24px;
+
+  pointer-events: none;
+}
+
+.sweetwait-photo img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 26px;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   FRASE BAJO LA FOTO
+========================================================= */
+
+.sweetwait-caption {
+  width: min(100%, 460px);
+
+  margin: 24px auto 0;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(2.2rem, 4vw, 3rem);
+
+  line-height: 1.15;
+
+  color: var(--pink-500);
+}
+
+/* =========================================================
+   GLOBOS DECORATIVOS
+========================================================= */
+
+.sweetwait-balloons {
+  position: absolute;
+
+  top: 50%;
+  left: -105px;
+
+  z-index: 1;
+
+  width: 330px;
+
+  transform: translateY(-50%) rotate(-5deg);
+
+  opacity: 0.24;
+
+  pointer-events: none;
+}
+
+.sweetwait-balloons img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   DULCE ESPERA V2.1
+   COMPOSICIÓN VERTICAL
+========================================================= */
+
+.sweetwait-layout {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0;
+
+  width: min(100%, 820px);
+
+  margin: 0 auto;
+}
+
+/* Texto */
+
+.sweetwait-copy {
+  width: min(100%, 680px);
+
+  text-align: center;
+}
+
+.sweetwait-copy .section-text {
+  width: min(100%, 620px);
+}
+
+.sweetwait-message {
+  width: min(100%, 580px);
+
+  margin: 18px auto 0;
+}
+
+/* Fotografía */
+
+.sweetwait-photo-area {
+  width: min(100%, 470px);
+
+  margin: 38px auto 0;
+
+  text-align: center;
+}
+
+.sweetwait-photo {
+  width: min(100%, 420px);
+}
+
+/* Frase */
+
+.sweetwait-caption {
+  margin-top: 24px;
+}
+
+/* Globos decorativos */
+
+.sweetwait-balloons {
+  top: auto;
+  left: -65px;
+  bottom: 20px;
+
+  width: 290px;
+
+  transform: rotate(-7deg);
+
+  opacity: 0.22;
+}
+
+/* =========================================================
+   CUENTA REGRESIVA V2
+========================================================= */
+
+.section-countdown {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-top: 100px;
+  padding-bottom: 110px;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255, 255, 255, 0.96),
+      transparent 42%
+    ),
+    linear-gradient(180deg, #fff3f6 0%, #fffaf8 100%);
+}
+
+/* =========================================================
+   CONTENEDOR
+========================================================= */
+
+.countdown-container {
+  position: relative;
+
+  z-index: 3;
+
+  width: min(100%, 850px);
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TEXTO INTRODUCTORIO
+========================================================= */
+
+.countdown-intro {
+  width: min(100%, 570px);
+
+  margin: 4px auto 38px;
+
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+
+  line-height: 1.6;
+
+  color: var(--brown-500);
+}
+
+.countdown-intro strong {
+  color: var(--pink-500);
+}
+
+/* =========================================================
+   CONTADOR
+========================================================= */
+
+.countdown {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+
+  width: min(100%, 700px);
+
+  margin: 0 auto;
+}
+
+/* Cada círculo */
+
+.countdown-item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 145px;
+  height: 145px;
+
+  justify-self: center;
+
+  padding: 16px;
+
+  border: 1px solid rgba(198, 161, 91, 0.58);
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.96),
+    rgba(253, 238, 243, 0.88)
+  );
+
+  box-shadow: 0 14px 35px rgba(125, 77, 92, 0.12);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Borde interior */
+
+.countdown-item::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border: 1px solid rgba(215, 107, 145, 0.18);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+/* Corazón superior */
+
+.countdown-item::after {
+  content: "♥";
+
+  position: absolute;
+
+  top: 12px;
+
+  font-size: 0.72rem;
+
+  color: var(--gold-400);
+}
+
+.countdown-item:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 18px 40px rgba(125, 77, 92, 0.17);
+}
+
+/* Número */
+
+.countdown-item span {
+  margin-top: 8px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(2.5rem, 5vw, 3.4rem);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  color: var(--pink-500);
+}
+
+/* Etiqueta */
+
+.countdown-item small {
+  margin-top: 8px;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: var(--brown-500);
+}
+
+/* =========================================================
+   FECHA DEL EVENTO
+========================================================= */
+
+.countdown-date {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 180px;
+
+  margin: 44px auto 0;
+
+  padding: 18px 14px;
+
+  border-top: 1px solid rgba(198, 161, 91, 0.5);
+
+  border-bottom: 1px solid rgba(198, 161, 91, 0.5);
+}
+
+.countdown-date-day {
+  font-family: "Great Vibes", cursive;
+
+  font-size: 2rem;
+
+  color: var(--pink-500);
+}
+
+.countdown-date strong {
+  margin: 2px 0;
+
+  font-size: 3.4rem;
+  font-weight: 600;
+
+  line-height: 1;
+
+  color: var(--gold-500);
+}
+
+.countdown-date-month {
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  color: var(--brown-600);
+}
+
+.countdown-date-year {
+  margin-top: 2px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.18em;
+
+  color: var(--gray-500);
+}
+
+/* =========================================================
+   GLOBOS
+========================================================= */
+
+.countdown-balloons {
+  position: absolute;
+
+  left: -90px;
+  bottom: 30px;
+
+  z-index: 1;
+
+  width: 300px;
+
+  opacity: 0.2;
+
+  transform: rotate(-7deg);
+
+  pointer-events: none;
+}
+
+.countdown-balloons img {
+  display: block;
+
+  width: 100%;
+}
+
+/* =========================================================
+   NUBES
+========================================================= */
+
+.countdown-clouds {
+  position: absolute;
+
+  right: -110px;
+  top: 65px;
+
+  z-index: 1;
+
+  width: 360px;
+
+  opacity: 0.13;
+
+  pointer-events: none;
+}
+
+.countdown-clouds img {
+  display: block;
+
+  width: 100%;
+}
+
+/* =========================================================
+   CUANDO LLEGA EL EVENTO
+========================================================= */
+
+.countdown-finished {
+  margin-top: 36px;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(2.5rem, 5vw, 3.4rem);
+
+  color: var(--pink-500);
+}
+
+/* =========================================================
+   FECHA Y HORA V2
+========================================================= */
+
+.section-event {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-top: 100px;
+  padding-bottom: 105px;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.96),
+      transparent 48%
+    ),
+    linear-gradient(180deg, #fffaf8 0%, #fff3f6 100%);
+}
+
+/* =========================================================
+   CONTENEDOR
+========================================================= */
+
+.event-layout {
+  width: min(100%, 720px);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* =========================================================
+   TEXTO INTRODUCTORIO
+========================================================= */
+
+.event-intro {
+  width: min(100%, 540px);
+
+  margin: 4px auto 36px;
+
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+
+  line-height: 1.6;
+
+  color: var(--brown-500);
+}
+
+/* =========================================================
+   TARJETA DE FECHA
+========================================================= */
+
+.event-date-card {
+  position: relative;
+
+  width: min(100%, 380px);
+
+  margin: 0 auto 28px;
+
+  padding: 26px 26px 24px;
+
+  border: 1px solid rgba(198, 161, 91, 0.55);
+
+  border-radius: 30px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.96),
+    rgba(253, 238, 243, 0.82)
+  );
+
+  box-shadow: 0 18px 45px rgba(125, 77, 92, 0.12);
+}
+
+.event-date-card::before {
+  content: "♥";
+
+  position: absolute;
+
+  top: -11px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  padding: 0 10px;
+
+  font-size: 0.9rem;
+
+  color: var(--pink-500);
+
+  background: #fff7f9;
+}
+
+/* Domingo */
+
+.event-date-weekday {
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: 2.4rem;
+
+  color: var(--pink-500);
+}
+
+/* NOV | 08 | 2026 */
+
+.event-date-main {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 14px;
+}
+
+.event-date-main strong {
+  position: relative;
+
+  padding: 0 20px;
+
+  font-size: 4.3rem;
+  font-weight: 600;
+
+  line-height: 1;
+
+  color: var(--gold-500);
+}
+
+.event-date-main strong::before,
+.event-date-main strong::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 1px;
+  height: 46px;
+
+  transform: translateY(-50%);
+
+  background: rgba(198, 161, 91, 0.45);
+}
+
+.event-date-main strong::before {
+  left: 0;
+}
+
+.event-date-main strong::after {
+  right: 0;
+}
+
+.event-month,
+.event-year {
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: var(--brown-500);
+}
+
+/* Fecha completa */
+
+.event-date-full {
+  display: block;
+
+  font-size: 1.15rem;
+
+  color: var(--brown-600);
+}
+
+/* =========================================================
+   TARJETA DE HORA
+========================================================= */
+
+.event-time-card {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  width: min(100%, 290px);
+
+  margin: 0 auto;
+
+  padding: 24px 20px;
+
+  border-top: 1px solid rgba(198, 161, 91, 0.46);
+
+  border-bottom: 1px solid rgba(198, 161, 91, 0.46);
+}
+
+.event-time-icon {
+  margin-bottom: 4px;
+
+  font-size: 1.1rem;
+
+  color: var(--pink-500);
+}
+
+.event-time-label {
+  margin-bottom: 5px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: var(--gold-500);
+}
+
+.event-time-card strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 2.2rem;
+  font-weight: 600;
+
+  color: var(--brown-600);
+}
+
+/* =========================================================
+   MENSAJE FINAL
+========================================================= */
+
+.event-final-message {
+  margin-top: 28px;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(2.2rem, 4vw, 2.9rem);
+
+  color: var(--pink-500);
+}
+
+/* =========================================================
+   UBICACIÓN V2
+========================================================= */
+
+.section-location {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-top: 95px;
+  padding-bottom: 105px;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(255, 255, 255, 0.96),
+      transparent 46%
+    ),
+    linear-gradient(180deg, #fff3f6 0%, #fffaf8 100%);
+}
+
+/* =========================================================
+   CONTENEDOR
+========================================================= */
+
+.location-layout {
+  position: relative;
+
+  z-index: 3;
+
+  width: min(100%, 760px);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.location-intro {
+  width: min(100%, 520px);
+
+  margin: 4px auto 34px;
+
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+
+  line-height: 1.6;
+
+  color: var(--brown-500);
+}
+
+/* =========================================================
+   TARJETA
+========================================================= */
+
+.location-card-v2 {
+  position: relative;
+
+  width: min(100%, 580px);
+
+  margin: 0 auto;
+
+  padding: 38px 34px 36px;
+
+  border: 1px solid rgba(198, 161, 91, 0.55);
+
+  border-radius: 34px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.97),
+    rgba(253, 238, 243, 0.84)
+  );
+
+  box-shadow: 0 22px 55px rgba(125, 77, 92, 0.14);
+}
+
+/* Borde interior */
+
+.location-card-v2::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 10px;
+
+  border: 1px solid rgba(215, 107, 145, 0.12);
+
+  border-radius: 26px;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   ICONO
+========================================================= */
+
+.location-icon {
+  margin-bottom: 8px;
+
+  font-size: 2.5rem;
+}
+
+/* =========================================================
+   ETIQUETA
+========================================================= */
+
+.location-label {
+  margin-bottom: 6px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: var(--gold-500);
+}
+
+/* =========================================================
+   NOMBRE DEL LUGAR
+========================================================= */
+
+.location-card-v2 h3 {
+  margin-bottom: 18px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+
+  font-weight: 600;
+
+  line-height: 1.15;
+
+  color: var(--pink-500);
+}
+
+/* =========================================================
+   SEPARADOR
+========================================================= */
+
+.location-separator {
+  width: 85px;
+  height: 1px;
+
+  margin: 0 auto 20px;
+
+  background: linear-gradient(90deg, transparent, var(--gold-400), transparent);
+}
+
+/* =========================================================
+   DIRECCIÓN
+========================================================= */
+
+.location-card-v2 address {
+  margin: 0 auto 28px;
+
+  font-size: 1.15rem;
+  font-style: normal;
+  line-height: 1.65;
+
+  color: var(--brown-500);
+}
+
+/* =========================================================
+   BOTÓN
+========================================================= */
+
+.location-button {
+  min-width: 205px;
+}
+
+/* =========================================================
+   NOTA
+========================================================= */
+
+.location-note {
+  margin-top: 20px;
+
+  font-size: 1rem;
+  font-style: italic;
+
+  color: var(--gray-500);
+}
+
+/* =========================================================
+   DECORACIÓN
+========================================================= */
+
+.location-decoration {
+  position: absolute;
+
+  right: -80px;
+  bottom: -50px;
+
+  z-index: 1;
+
+  width: 310px;
+
+  opacity: 0.14;
+
+  pointer-events: none;
+}
+
+.location-decoration img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   AJUSTE DE ESPACIADO ENTRE SECCIONES
+   COUNTDOWN → FECHA → UBICACIÓN
+========================================================= */
+
+/* Final de cuenta regresiva */
+.section-countdown {
+  padding-bottom: 55px;
+}
+
+/* Fecha y hora */
+.section-event {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+/* Inicio de ubicación */
+.section-location {
+  padding-top: 55px;
+}
+
+/* =========================================================
+   SISTEMA GLOBAL DE ESPACIADO ENTRE SECCIONES
+========================================================= */
+
+:root {
+  --section-space-desktop: 55px;
+}
+
+/* Espaciado estándar */
+
+.section-welcome,
+.section-parents,
+.section-sweet-wait,
+.section-countdown,
+.section-event,
+.section-location,
+.section-confirmation {
+  padding-top: var(--section-space-desktop);
+  padding-bottom: var(--section-space-desktop);
+}
+
+/* =========================================================
+   EXCEPCIONES POR DECORACIONES
+========================================================= */
+
+/*
+ * Bienvenida:
+ * conserva espacio inferior para las nubes.
+ */
+
+.section-welcome {
+  padding-bottom: 90px;
+}
+
+/*
+ * Dulce espera:
+ * reserva espacio para los globos.
+ */
+
+.section-sweet-wait {
+  padding-bottom: 80px;
+}
+
+/*
+ * Cuenta regresiva:
+ * globos en la zona inferior.
+ */
+
+.section-countdown {
+  padding-bottom: 70px;
+}
+
+/*
+ * Ubicación:
+ * decoración dorada inferior.
+ */
+
+.section-location {
+  padding-bottom: 80px;
+}
+
+/* =========================================================
+   CIERRE FINAL
+========================================================= */
+
+.section-farewell {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+/* =========================================================
+   CONFIRMACIÓN V2
+========================================================= */
+
+.section-confirmation {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(255, 255, 255, 0.96),
+      transparent 45%
+    ),
+    linear-gradient(180deg, #fffaf8 0%, #fff3f6 100%);
+}
+
+/* =========================================================
+   CONTENEDOR
+========================================================= */
+
+.confirmation-layout {
+  position: relative;
+
+  z-index: 3;
+
+  width: min(100%, 720px);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.confirmation-intro {
+  width: min(100%, 560px);
+
+  margin: 4px auto 34px;
+
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+
+  line-height: 1.6;
+
+  color: var(--brown-500);
+}
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+.confirmation-form-v2 {
+  position: relative;
+
+  width: min(100%, 500px);
+
+  margin: 0 auto;
+
+  padding: 36px 32px;
+
+  border: 1px solid rgba(198, 161, 91, 0.55);
+
+  border-radius: 32px;
+
+  text-align: left;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.97),
+    rgba(253, 238, 243, 0.86)
+  );
+
+  box-shadow: 0 22px 55px rgba(125, 77, 92, 0.14);
+}
+
+/* Borde interior */
+
+.confirmation-form-v2::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 9px;
+
+  border: 1px solid rgba(215, 107, 145, 0.11);
+
+  border-radius: 24px;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.confirmation-form-v2 .form-group label {
+  position: relative;
+
+  z-index: 2;
+
+  margin-bottom: 10px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  letter-spacing: 0.03em;
+
+  color: var(--brown-600);
+}
+
+/* =========================================================
+   CAMPO NOMBRE
+========================================================= */
+
+.confirmation-form-v2 .form-group input[type="text"] {
+  position: relative;
+
+  z-index: 2;
+
+  height: 54px;
+
+  border: 1px solid rgba(198, 161, 91, 0.42);
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* =========================================================
+   CONTADOR DE PERSONAS
+========================================================= */
+
+.confirmation-form-v2 .guest-counter {
+  position: relative;
+
+  z-index: 2;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(198, 161, 91, 0.42);
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.confirmation-form-v2 .counter-button {
+  color: var(--pink-500);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.confirmation-form-v2 .counter-button:hover {
+  background: rgba(248, 216, 227, 0.45);
+}
+
+.confirmation-form-v2 .counter-button:active {
+  transform: scale(0.92);
+}
+
+/* =========================================================
+   BOTÓN CONFIRMAR
+========================================================= */
+
+.confirmation-form-v2 .btn-confirm {
+  position: relative;
+
+  z-index: 2;
+
+  min-height: 52px;
+
+  margin-top: 4px;
+}
+
+/* =========================================================
+   AYUDA
+========================================================= */
+
+.confirmation-help {
+  width: min(100%, 470px);
+
+  margin: 20px auto 0;
+
+  font-size: 0.98rem;
+  font-style: italic;
+  line-height: 1.5;
+
+  color: var(--gray-500);
+}
+
+/* =========================================================
+   MENSAJE DE CONFIRMACIÓN
+========================================================= */
+
+.confirmation-success-v2 {
+  position: relative;
+
+  width: min(100%, 500px);
+
+  margin: 32px auto 0;
+
+  padding: 34px 28px 28px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(198, 161, 91, 0.48);
+
+  border-radius: 32px;
+
+  background: linear-gradient(145deg, #ffffff, #fff0f4);
+
+  box-shadow: 0 20px 50px rgba(125, 77, 92, 0.13);
+}
+
+.confirmation-success-v2 .success-icon {
+  margin-bottom: 6px;
+
+  color: var(--gold-500);
+}
+
+.confirmation-success-v2 h3 {
+  margin-bottom: 10px;
+
+  font-size: 3.2rem;
+}
+
+.confirmation-success-v2 p {
+  position: relative;
+
+  z-index: 2;
+
+  font-size: 1.25rem;
+  line-height: 1.55;
+
+  color: var(--brown-500);
+}
+
+/* =========================================================
+   ELEFANTITA DE CONFIRMACIÓN
+========================================================= */
+
+.success-elephant {
+  width: min(100%, 210px);
+
+  margin: 22px auto 0;
+}
+
+.success-elephant img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  filter: drop-shadow(0 12px 22px rgba(113, 73, 84, 0.1));
+}
+
+/* =========================================================
+   ELEFANTITA DECORATIVA DE FONDO
+========================================================= */
+
+.confirmation-decoration {
+  position: absolute;
+
+  left: -110px;
+  bottom: -30px;
+
+  z-index: 1;
+
+  width: 300px;
+
+  opacity: 0.11;
+
+  pointer-events: none;
+}
+
+.confirmation-decoration img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   CIERRE FINAL V2
+========================================================= */
+
+.section-farewell {
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 650px;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255, 255, 255, 0.98),
+      transparent 45%
+    ),
+    linear-gradient(180deg, #fff3f6 0%, #fffaf8 100%);
+}
+
+/* =========================================================
+   CONTENEDOR
+========================================================= */
+
+.farewell-layout {
+  position: relative;
+
+  z-index: 3;
+
+  width: min(100%, 720px);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* =========================================================
+   MENSAJE PRINCIPAL
+========================================================= */
+
+.farewell-message {
+  width: min(100%, 600px);
+
+  margin: 0 auto 18px;
+
+  font-size: clamp(1.25rem, 2.5vw, 1.55rem);
+
+  line-height: 1.65;
+
+  color: var(--brown-500);
+}
+
+/* =========================================================
+   MENSAJE DESTACADO
+========================================================= */
+
+.farewell-message-highlight {
+  width: min(100%, 580px);
+
+  margin: 10px auto 0;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(2.3rem, 4.5vw, 3.3rem);
+
+  line-height: 1.15;
+
+  color: var(--pink-500);
+}
+
+/* =========================================================
+   OSITOS
+========================================================= */
+
+.farewell-bears {
+  width: min(100%, 340px);
+
+  margin: 30px auto 0;
+}
+
+.farewell-bears img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  filter: drop-shadow(0 14px 26px rgba(113, 73, 84, 0.12));
+
+  animation: farewellBearsFloat 5.5s ease-in-out infinite;
+}
+
+@keyframes farewellBearsFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* =========================================================
+   FIRMA
+========================================================= */
+
+.farewell-signature {
+  margin-top: 24px;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+
+  color: var(--gold-500);
+}
+
+/* =========================================================
+   TE ESPERAMOS
+========================================================= */
+
+.farewell-final {
+  margin-top: 8px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+
+  color: var(--brown-500);
+}
+
+/* =========================================================
+   CIERRE - CORAZONES, ESTRELLAS Y LUNAS FLOTANTES
+========================================================= */
+
+.farewell-floating-elements {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.floating-item {
+  position: absolute;
+
+  bottom: -60px;
+
+  opacity: 0;
+
+  animation: farewellFloatUp 8s linear infinite;
+
+  filter: drop-shadow(0 4px 8px rgba(125, 77, 92, 0.12));
+}
+
+/* =========================================================
+   COLORES
+========================================================= */
+
+.floating-heart {
+  color: var(--pink-400);
+}
+
+.floating-star {
+  color: var(--gold-400);
+}
+
+.floating-moon {
+  color: var(--gold-300);
+}
+
+/* =========================================================
+   POSICIONES Y TIEMPOS
+========================================================= */
+
+.floating-item:nth-child(1) {
+  left: 8%;
+  font-size: 1.1rem;
+  animation-delay: 0s;
+  animation-duration: 7s;
+}
+
+.floating-item:nth-child(2) {
+  left: 18%;
+  font-size: 1rem;
+  animation-delay: 2s;
+  animation-duration: 9s;
+}
+
+.floating-item:nth-child(3) {
+  left: 28%;
+  font-size: 1.5rem;
+  animation-delay: 4s;
+  animation-duration: 10s;
+}
+
+.floating-item:nth-child(4) {
+  left: 38%;
+  font-size: 0.9rem;
+  animation-delay: 1s;
+  animation-duration: 8s;
+}
+
+.floating-item:nth-child(5) {
+  left: 48%;
+  font-size: 1.2rem;
+  animation-delay: 5s;
+  animation-duration: 9s;
+}
+
+.floating-item:nth-child(6) {
+  left: 58%;
+  font-size: 1rem;
+  animation-delay: 3s;
+  animation-duration: 7.5s;
+}
+
+.floating-item:nth-child(7) {
+  left: 68%;
+  font-size: 1.4rem;
+  animation-delay: 6s;
+  animation-duration: 10s;
+}
+
+.floating-item:nth-child(8) {
+  left: 77%;
+  font-size: 1rem;
+  animation-delay: 1.5s;
+  animation-duration: 8.5s;
+}
+
+.floating-item:nth-child(9) {
+  left: 86%;
+  font-size: 0.95rem;
+  animation-delay: 4.5s;
+  animation-duration: 7s;
+}
+
+.floating-item:nth-child(10) {
+  left: 13%;
+  font-size: 0.8rem;
+  animation-delay: 6.5s;
+  animation-duration: 9s;
+}
+
+.floating-item:nth-child(11) {
+  left: 63%;
+  font-size: 1.15rem;
+  animation-delay: 7s;
+  animation-duration: 8s;
+}
+
+.floating-item:nth-child(12) {
+  left: 92%;
+  font-size: 1.35rem;
+  animation-delay: 2.8s;
+  animation-duration: 10s;
+}
+
+/* =========================================================
+   ANIMACIÓN
+========================================================= */
+
+@keyframes farewellFloatUp {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(0.8);
+
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 0.65;
+  }
+
+  50% {
+    transform: translateY(-280px) rotate(8deg) scale(1);
+  }
+
+  88% {
+    opacity: 0.45;
+  }
+
+  100% {
+    transform: translateY(-620px) rotate(-8deg) scale(1.08);
+
+    opacity: 0;
+  }
+}
+
+/* Contenido siempre por encima */
+
+.farewell-layout {
+  position: relative;
+  z-index: 3;
+}

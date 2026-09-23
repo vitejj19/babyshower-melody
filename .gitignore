@@ -1,0 +1,12 @@
+# Respaldos locales
+backup/
+
+# ZIP de revisión
+*.zip
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración local de VS Code
+.vscode/

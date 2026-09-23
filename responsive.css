@@ -1,0 +1,2345 @@
+/* =========================================================
+   BABY SHOWER - MELODY ELIANNA
+   RESPONSIVE
+========================================================= */
+
+/* =========================================================
+   TABLET / LAPTOP PEQUEÑA
+   1024px o menos
+========================================================= */
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 78px 24px;
+  }
+
+  .cover-content {
+    width: min(100%, 560px);
+  }
+
+  .countdown {
+    width: min(100%, 620px);
+    gap: 16px;
+  }
+
+  .countdown-item {
+    min-height: 115px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   768px o menos
+========================================================= */
+
+@media (max-width: 768px) {
+  /* -------------------------------------------------------
+     PORTADA
+  -------------------------------------------------------- */
+
+  .cover {
+    padding: max(24px, env(safe-area-inset-top)) 20px
+      max(24px, env(safe-area-inset-bottom));
+  }
+
+  .cover::after {
+    inset: 12px;
+    border-radius: 26px;
+  }
+
+  .cover-content {
+    width: min(100%, 520px);
+  }
+
+  .cover-kicker {
+    margin-bottom: 14px;
+
+    font-size: clamp(1.35rem, 5vw, 1.65rem);
+  }
+
+  .cover-title {
+    font-size: clamp(2.8rem, 10vw, 4.3rem);
+  }
+
+  .cover-divider {
+    width: min(250px, 82%);
+    margin: 18px auto 12px;
+  }
+
+  .cover-name {
+    font-size: clamp(4rem, 15vw, 6rem);
+  }
+
+  .cover-name span {
+    margin-top: 10px;
+  }
+
+  .cover-date {
+    margin-top: 24px;
+
+    font-size: 1.2rem;
+  }
+
+  .cover-parents {
+    margin-bottom: 24px;
+
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+
+  .btn-open {
+    min-width: 205px;
+
+    padding: 14px 26px;
+  }
+
+  /* -------------------------------------------------------
+     SECCIONES
+  -------------------------------------------------------- */
+
+  .section {
+    padding: 72px 20px;
+  }
+
+  .section-container {
+    width: min(100%, 680px);
+  }
+
+  .section-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+  }
+
+  .section-title {
+    font-size: clamp(2.4rem, 9vw, 3.6rem);
+  }
+
+  .script-title {
+    font-size: clamp(3.4rem, 12vw, 4.8rem);
+  }
+
+  .section-text {
+    font-size: clamp(1.22rem, 4vw, 1.45rem);
+
+    line-height: 1.6;
+  }
+
+  /* -------------------------------------------------------
+     FOTOGRAFÍAS
+  -------------------------------------------------------- */
+
+  .photo-card {
+    width: min(100%, 500px);
+
+    margin-top: 38px;
+  }
+
+  .photo-frame {
+    border-radius: 28px;
+  }
+
+  .photo-frame img {
+    border-radius: 20px;
+  }
+
+  .photo-frame-portrait {
+    width: min(100%, 400px);
+  }
+
+  .photo-caption {
+    font-size: clamp(2rem, 7vw, 2.5rem);
+  }
+
+  /* -------------------------------------------------------
+     PAPÁS
+  -------------------------------------------------------- */
+
+  .parents-names {
+    gap: 8px;
+
+    font-size: clamp(2.1rem, 8vw, 3rem);
+  }
+
+  /* -------------------------------------------------------
+     CUENTA REGRESIVA
+  -------------------------------------------------------- */
+
+  .countdown {
+    grid-template-columns: repeat(4, minmax(80px, 1fr));
+
+    gap: 12px;
+
+    width: min(100%, 560px);
+  }
+
+  .countdown-item {
+    min-height: 100px;
+
+    padding: 14px 8px;
+  }
+
+  .countdown-item span {
+    font-size: clamp(1.9rem, 7vw, 2.5rem);
+  }
+
+  /* -------------------------------------------------------
+     EVENTO / UBICACIÓN
+  -------------------------------------------------------- */
+
+  .event-card {
+    width: min(100%, 450px);
+  }
+
+  .location-card {
+    width: min(100%, 580px);
+
+    padding: 34px 26px;
+  }
+
+  /* -------------------------------------------------------
+     CONFIRMACIÓN
+  -------------------------------------------------------- */
+
+  .confirmation-form {
+    width: min(100%, 500px);
+
+    padding: 30px 26px;
+  }
+
+  /* -------------------------------------------------------
+     MÚSICA
+  -------------------------------------------------------- */
+
+  .music-toggle {
+    right: 18px;
+    bottom: 18px;
+
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* =========================================================
+   CELULAR
+   600px o menos
+========================================================= */
+
+@media (max-width: 600px) {
+  /* -------------------------------------------------------
+     BASE
+  -------------------------------------------------------- */
+
+  body {
+    width: 100%;
+  }
+
+  /* -------------------------------------------------------
+     PORTADA
+  -------------------------------------------------------- */
+
+  .cover {
+    min-height: 100svh;
+
+    padding: max(24px, env(safe-area-inset-top)) 22px
+      max(24px, env(safe-area-inset-bottom));
+  }
+
+  .cover::after {
+    inset: 10px;
+
+    border-radius: 24px;
+  }
+
+  .cover-decoration {
+    width: 220px;
+    height: 220px;
+  }
+
+  .cover-decoration-top {
+    top: -100px;
+    right: -80px;
+  }
+
+  .cover-decoration-bottom {
+    bottom: -110px;
+    left: -85px;
+  }
+
+  .cover-content {
+    width: 100%;
+
+    padding: 10px 4px;
+  }
+
+  .cover-kicker {
+    margin-bottom: 16px;
+
+    font-size: 1.35rem;
+    line-height: 1.3;
+  }
+
+  .cover-title {
+    font-size: clamp(2.9rem, 13vw, 4rem);
+  }
+
+  .cover-divider {
+    width: min(220px, 78%);
+    margin: 18px auto 12px;
+  }
+
+  .cover-divider > span:not(.cover-heart) {
+    width: 70px;
+  }
+
+  .cover-name {
+    font-size: clamp(4rem, 18vw, 5.7rem);
+
+    line-height: 0.82;
+  }
+
+  .cover-name span {
+    margin-top: 10px;
+
+    font-size: 0.38em;
+  }
+
+  .cover-date {
+    margin-top: 26px;
+
+    font-size: 1.18rem;
+    line-height: 1.4;
+  }
+
+  .cover-parents {
+    margin-top: 8px;
+    margin-bottom: 24px;
+
+    font-size: 2.15rem;
+  }
+
+  .btn-open {
+    width: min(100%, 260px);
+
+    min-height: 50px;
+
+    padding: 14px 24px;
+
+    font-size: 0.9rem;
+  }
+
+  /* -------------------------------------------------------
+     SECCIONES
+  -------------------------------------------------------- */
+
+  .section {
+    padding: 64px 18px;
+  }
+
+  .section-container {
+    width: 100%;
+  }
+
+  .section-eyebrow {
+    margin-bottom: 12px;
+
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+  }
+
+  .section-title {
+    margin-bottom: 18px;
+
+    font-size: clamp(2.35rem, 11vw, 3.3rem);
+  }
+
+  .script-title {
+    font-size: clamp(3.4rem, 16vw, 4.8rem);
+
+    line-height: 0.95;
+  }
+
+  .full-name {
+    margin-top: 0;
+
+    font-size: 1.15rem;
+    line-height: 1.45;
+  }
+
+  /* -------------------------------------------------------
+     TEXTOS
+  -------------------------------------------------------- */
+
+  .section-text {
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .welcome-text {
+    margin-top: 18px;
+  }
+
+  /* -------------------------------------------------------
+     DIVISORES
+  -------------------------------------------------------- */
+
+  .ornament-divider {
+    margin: 22px auto;
+  }
+
+  .ornament-divider::before,
+  .ornament-divider::after {
+    width: 55px;
+  }
+
+  /* -------------------------------------------------------
+     FOTOGRAFÍAS
+  -------------------------------------------------------- */
+
+  .photo-card {
+    width: 100%;
+
+    margin-top: 34px;
+  }
+
+  .photo-frame {
+    width: 100%;
+
+    padding: 6px;
+
+    border-radius: 24px;
+  }
+
+  .photo-frame::after {
+    inset: 10px;
+
+    border-radius: 16px;
+  }
+
+  .photo-frame img {
+    width: 100%;
+
+    border-radius: 18px;
+  }
+
+  .photo-frame-portrait {
+    width: min(100%, 360px);
+  }
+
+  .photo-caption {
+    margin-top: 20px;
+
+    padding: 0 4px;
+
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  /* -------------------------------------------------------
+     PAPÁS
+  -------------------------------------------------------- */
+
+  .parents-names {
+    flex-direction: column;
+
+    gap: 0;
+
+    margin-bottom: 24px;
+
+    font-size: 2.25rem;
+    line-height: 1.15;
+  }
+
+  .parents-ampersand {
+    margin: 5px 0;
+
+    font-size: 1.8rem;
+  }
+
+  /* -------------------------------------------------------
+     CUENTA REGRESIVA
+  -------------------------------------------------------- */
+
+  .countdown {
+    grid-template-columns: repeat(2, minmax(110px, 1fr));
+
+    gap: 16px;
+
+    width: min(100%, 340px);
+
+    margin-top: 34px;
+  }
+
+  .countdown-item {
+    width: 120px;
+    height: 120px;
+
+    min-height: 0;
+
+    justify-self: center;
+
+    padding: 12px;
+
+    border-radius: 50%;
+  }
+
+  .countdown-item span {
+    font-size: 2.35rem;
+  }
+
+  .countdown-item small {
+    font-size: 0.68rem;
+  }
+
+  .countdown-finished {
+    font-size: 2.2rem;
+  }
+
+  /* -------------------------------------------------------
+     EVENTO
+  -------------------------------------------------------- */
+
+  .event-card {
+    width: 100%;
+
+    margin: 18px auto;
+
+    padding: 24px 18px;
+  }
+
+  .event-icon {
+    font-size: 1.8rem;
+  }
+
+  .event-card strong {
+    font-size: 1.3rem;
+    line-height: 1.45;
+  }
+
+  /* -------------------------------------------------------
+     UBICACIÓN
+  -------------------------------------------------------- */
+
+  .location-card {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 30px 20px;
+
+    border-radius: 26px;
+  }
+
+  .location-pin {
+    font-size: 2.1rem;
+  }
+
+  .location-card h3 {
+    font-size: 1.8rem;
+    line-height: 1.15;
+  }
+
+  .location-card p {
+    font-size: 1.12rem;
+    line-height: 1.4;
+  }
+
+  .location-card address {
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  .btn-primary {
+    min-width: 190px;
+
+    min-height: 50px;
+
+    padding: 14px 24px;
+  }
+
+  /* -------------------------------------------------------
+     CONFIRMACIÓN
+  -------------------------------------------------------- */
+
+  .confirmation-form {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 28px 20px;
+
+    border-radius: 26px;
+  }
+
+  .form-group {
+    margin-bottom: 22px;
+  }
+
+  .form-group label {
+    font-size: 0.78rem;
+  }
+
+  .form-group input[type="text"] {
+    height: 50px;
+
+    font-size: 0.9rem;
+  }
+
+  .guest-counter {
+    grid-template-columns: 52px 1fr 52px;
+  }
+
+  .counter-button {
+    height: 50px;
+  }
+
+  .btn-confirm {
+    width: 100%;
+  }
+
+  .confirmation-success {
+    width: 100%;
+
+    padding: 30px 20px;
+  }
+
+  .confirmation-success h3 {
+    font-size: 2.7rem;
+  }
+
+  .confirmation-success p {
+    font-size: 1.18rem;
+  }
+
+  /* -------------------------------------------------------
+     DESPEDIDA
+  -------------------------------------------------------- */
+
+  .section-farewell {
+    min-height: 480px;
+  }
+
+  .farewell-message {
+    font-size: 1.22rem;
+  }
+
+  .farewell-message-highlight {
+    font-size: 2.45rem;
+  }
+
+  .farewell-signature {
+    font-size: 2.6rem;
+  }
+
+  /* -------------------------------------------------------
+     CONTROL DE MÚSICA
+  -------------------------------------------------------- */
+
+  .music-toggle {
+    right: 16px;
+
+    bottom: max(16px, env(safe-area-inset-bottom));
+
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+   420px o menos
+========================================================= */
+
+@media (max-width: 420px) {
+  /* -------------------------------------------------------
+     PORTADA
+  -------------------------------------------------------- */
+
+  .cover {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .cover-kicker {
+    font-size: 1.28rem;
+  }
+
+  .cover-title {
+    font-size: 2.85rem;
+  }
+
+  .cover-name {
+    font-size: 4.15rem;
+  }
+
+  .cover-name span {
+    font-size: 0.4em;
+  }
+
+  .cover-date {
+    font-size: 1.08rem;
+  }
+
+  .cover-parents {
+    font-size: 2rem;
+  }
+
+  /* -------------------------------------------------------
+     SECCIONES
+  -------------------------------------------------------- */
+
+  .section {
+    padding: 58px 16px;
+  }
+
+  .section-title {
+    font-size: 2.45rem;
+  }
+
+  .script-title {
+    font-size: 3.65rem;
+  }
+
+  .section-text {
+    font-size: 1.16rem;
+  }
+
+  /* -------------------------------------------------------
+     CUENTA REGRESIVA
+  -------------------------------------------------------- */
+
+  .countdown {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+
+    width: min(100%, 290px);
+  }
+
+  .countdown-item {
+    width: 108px;
+    height: 108px;
+  }
+
+  .countdown-item span {
+    font-size: 2.05rem;
+  }
+
+  .countdown-item small {
+    font-size: 0.62rem;
+  }
+
+  /* -------------------------------------------------------
+     UBICACIÓN
+  -------------------------------------------------------- */
+
+  .location-card {
+    padding: 28px 17px;
+  }
+
+  .location-card h3 {
+    font-size: 1.7rem;
+  }
+
+  /* -------------------------------------------------------
+     FORMULARIO
+  -------------------------------------------------------- */
+
+  .confirmation-form {
+    padding: 26px 17px;
+  }
+}
+
+/* =========================================================
+   CELULARES MUY PEQUEÑOS
+   360px o menos
+========================================================= */
+
+@media (max-width: 360px) {
+  .cover-kicker {
+    font-size: 1.2rem;
+  }
+
+  .cover-title {
+    font-size: 2.6rem;
+  }
+
+  .cover-name {
+    font-size: 3.8rem;
+  }
+
+  .cover-date {
+    font-size: 1rem;
+  }
+
+  .btn-open {
+    width: min(100%, 230px);
+  }
+
+  .countdown {
+    width: min(100%, 260px);
+  }
+
+  .countdown-item {
+    width: 100px;
+    height: 100px;
+  }
+
+  .section {
+    padding: 54px 14px;
+  }
+}
+
+/* =========================================================
+   PANTALLAS HORIZONTALES PEQUEÑAS
+========================================================= */
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .cover {
+    position: fixed;
+
+    overflow-y: auto;
+
+    align-items: flex-start;
+
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .cover-content {
+    margin: auto;
+  }
+
+  .cover-kicker {
+    margin-bottom: 8px;
+
+    font-size: 1.1rem;
+  }
+
+  .cover-title {
+    font-size: 2.7rem;
+  }
+
+  .cover-divider {
+    margin: 10px auto;
+  }
+
+  .cover-name {
+    font-size: 3.8rem;
+  }
+
+  .cover-date {
+    margin-top: 16px;
+
+    font-size: 1rem;
+  }
+
+  .cover-parents {
+    margin-bottom: 14px;
+
+    font-size: 1.8rem;
+  }
+
+  .btn-open {
+    min-height: 44px;
+
+    padding: 11px 24px;
+  }
+}
+
+/* =========================================================
+   REDUCCIÓN DE MOVIMIENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   PORTADA GRÁFICA V2 - RESPONSIVE
+========================================================= */
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .cover-layout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+
+    width: min(100%, 620px);
+    max-height: none;
+  }
+
+  .cover-visual {
+    order: 1;
+  }
+
+  .cover-content {
+    order: 2;
+
+    max-width: 520px;
+  }
+
+  .cover-elephant {
+    width: min(100%, 410px);
+    max-height: 43svh;
+  }
+
+  .cover-kicker {
+    margin-bottom: 8px;
+  }
+
+  .cover-title {
+    font-size: clamp(2.8rem, 8vw, 4rem);
+  }
+
+  .cover-divider {
+    margin: 10px auto 8px;
+  }
+
+  .cover-name {
+    font-size: clamp(4rem, 12vw, 5.5rem);
+  }
+
+  .cover-date {
+    margin-top: 18px;
+  }
+
+  .cover-parents {
+    margin-bottom: 18px;
+  }
+}
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+  .cover {
+    overflow-y: auto;
+
+    align-items: flex-start;
+
+    padding: max(22px, env(safe-area-inset-top)) 18px
+      max(22px, env(safe-area-inset-bottom));
+  }
+
+  .cover-layout {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    gap: 4px;
+
+    width: 100%;
+    max-width: 430px;
+
+    margin: auto;
+  }
+
+  /* Elefantita */
+
+  .cover-visual {
+    width: 100%;
+
+    margin-top: 4px;
+    margin-bottom: -6px;
+  }
+
+  .cover-elephant {
+    width: min(100%, 330px);
+
+    max-height: 38svh;
+
+    margin: 0 auto;
+  }
+
+  /* Corazones */
+
+  .heart-one {
+    top: 10%;
+    right: 7%;
+
+    font-size: 1.1rem;
+  }
+
+  .heart-two {
+    top: 48%;
+    left: 4%;
+
+    font-size: 0.8rem;
+  }
+
+  .heart-three {
+    right: 10%;
+    bottom: 10%;
+
+    font-size: 0.9rem;
+  }
+
+  /* Información */
+
+  .cover-content {
+    width: 100%;
+    max-width: 390px;
+  }
+
+  .cover-kicker {
+    margin-bottom: 8px;
+
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
+  .cover-title {
+    font-size: clamp(2.7rem, 11vw, 3.5rem);
+  }
+
+  .cover-divider {
+    width: min(200px, 70%);
+
+    margin: 10px auto 6px;
+  }
+
+  .cover-divider > span:not(.cover-heart) {
+    width: 60px;
+  }
+
+  /* Melody */
+
+  .cover-name {
+    font-size: clamp(3.8rem, 15vw, 4.8rem);
+
+    line-height: 0.8;
+  }
+
+  .cover-name span {
+    margin-top: 8px;
+
+    font-size: 0.4em;
+  }
+
+  /* Fecha */
+
+  .cover-date {
+    margin-top: 18px;
+
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  /* Papás */
+
+  .cover-parents {
+    margin-top: 5px;
+    margin-bottom: 16px;
+
+    font-size: 2rem;
+  }
+
+  /* Botón */
+
+  .btn-open {
+    width: min(100%, 240px);
+
+    min-width: 0;
+
+    padding: 13px 22px;
+  }
+}
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 420px) {
+  .cover-layout {
+    max-width: 360px;
+  }
+
+  .cover-elephant {
+    width: min(100%, 285px);
+
+    max-height: 35svh;
+  }
+
+  .cover-kicker {
+    font-size: 1.15rem;
+  }
+
+  .cover-title {
+    font-size: 2.65rem;
+  }
+
+  .cover-name {
+    font-size: 3.9rem;
+  }
+
+  .cover-date {
+    font-size: 0.98rem;
+  }
+
+  .cover-parents {
+    font-size: 1.85rem;
+  }
+}
+
+/* =========================================================
+   CELULARES MUY PEQUEÑOS
+========================================================= */
+
+@media (max-width: 360px) {
+  .cover-elephant {
+    width: min(100%, 250px);
+  }
+
+  .cover-kicker {
+    font-size: 1.05rem;
+  }
+
+  .cover-title {
+    font-size: 2.4rem;
+  }
+
+  .cover-name {
+    font-size: 3.55rem;
+  }
+
+  .cover-date {
+    margin-top: 14px;
+
+    font-size: 0.92rem;
+  }
+
+  .cover-parents {
+    margin-bottom: 14px;
+
+    font-size: 1.7rem;
+  }
+
+  .btn-open {
+    width: min(100%, 220px);
+
+    min-height: 46px;
+
+    padding: 11px 18px;
+
+    font-size: 0.82rem;
+  }
+}
+
+/* =========================================================
+   CELULAR EN HORIZONTAL
+========================================================= */
+
+@media (max-height: 650px) and (orientation: landscape) {
+  .cover-layout {
+    grid-template-columns:
+      minmax(0, 0.9fr)
+      minmax(320px, 1.1fr);
+
+    display: grid;
+
+    width: min(100%, 950px);
+
+    gap: 24px;
+  }
+
+  .cover-visual {
+    order: initial;
+  }
+
+  .cover-content {
+    order: initial;
+  }
+
+  .cover-elephant {
+    width: min(100%, 380px);
+
+    max-height: 74vh;
+  }
+
+  .cover-kicker {
+    font-size: 1rem;
+  }
+
+  .cover-title {
+    font-size: 2.5rem;
+  }
+
+  .cover-divider {
+    margin: 8px auto;
+  }
+
+  .cover-name {
+    font-size: 3.7rem;
+  }
+
+  .cover-date {
+    margin-top: 12px;
+
+    font-size: 0.9rem;
+  }
+
+  .cover-parents {
+    margin-bottom: 10px;
+
+    font-size: 1.7rem;
+  }
+}
+
+/* =========================================================
+   BIENVENIDA V2 - RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .welcome-layout {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .welcome-photo-area {
+    order: 1;
+  }
+
+  .welcome-copy {
+    order: 2;
+  }
+
+  .welcome-elephant-wrap {
+    width: min(100%, 250px);
+  }
+
+  .welcome-clouds {
+    width: 480px;
+
+    right: -180px;
+    bottom: -80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-welcome {
+    padding-top: 72px;
+  }
+
+  .welcome-layout {
+    gap: 32px;
+  }
+
+  .ultrasound-frame {
+    width: min(100%, 360px);
+
+    padding: 7px;
+
+    border-radius: 24px;
+  }
+
+  .ultrasound-frame img {
+    border-radius: 18px;
+  }
+
+  .ultrasound-frame::before {
+    inset: 10px;
+
+    border-radius: 16px;
+  }
+
+  .ultrasound-crown {
+    top: -22px;
+
+    font-size: 2.2rem;
+  }
+
+  .welcome-caption {
+    width: min(100%, 340px);
+
+    font-size: 2rem;
+  }
+
+  .welcome-elephant-wrap {
+    width: min(100%, 220px);
+
+    margin-top: 26px;
+  }
+
+  .welcome-clouds {
+    width: 400px;
+
+    right: -200px;
+    bottom: -40px;
+
+    opacity: 0.09;
+  }
+}
+
+@media (max-width: 420px) {
+  .welcome-elephant-wrap {
+    width: min(100%, 200px);
+  }
+
+  .welcome-caption {
+    font-size: 1.85rem;
+  }
+}
+
+/* =========================================================
+   BIENVENIDA V2.1 - RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .welcome-layout {
+    display: flex;
+    flex-direction: column;
+
+    width: min(100%, 680px);
+
+    gap: 0;
+  }
+
+  .welcome-copy,
+  .welcome-photo-area {
+    order: initial;
+  }
+
+  .welcome-elephant-wrap {
+    width: min(100%, 220px);
+
+    margin: 26px auto 38px;
+  }
+
+  .welcome-clouds {
+    width: 450px;
+
+    right: -150px;
+    bottom: -20px;
+
+    opacity: 0.18;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-welcome {
+    padding-top: 78px;
+    padding-bottom: 82px;
+  }
+
+  .welcome-layout {
+    width: 100%;
+  }
+
+  .welcome-copy {
+    width: 100%;
+  }
+
+  .welcome-elephant-wrap {
+    width: min(100%, 195px);
+
+    margin: 24px auto 34px;
+  }
+
+  .welcome-photo-area {
+    width: 100%;
+  }
+
+  .ultrasound-frame {
+    width: min(100%, 360px);
+  }
+
+  .welcome-caption {
+    width: min(100%, 340px);
+
+    font-size: 1.95rem;
+  }
+
+  .welcome-clouds {
+    width: 360px;
+
+    right: -180px;
+    bottom: -10px;
+
+    opacity: 0.15;
+  }
+}
+
+/* =========================================================
+   BIENVENIDA - AJUSTE DE NUBES EN MÓVIL
+========================================================= */
+
+@media (max-width: 600px) {
+  .section-welcome {
+    padding-bottom: 190px;
+  }
+
+  .welcome-clouds {
+    width: 300px;
+
+    right: -55px;
+    bottom: 5px;
+
+    opacity: 0.26;
+
+    z-index: 1;
+  }
+
+  .welcome-layout {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-welcome {
+    padding-bottom: 170px;
+  }
+
+  .welcome-clouds {
+    width: 270px;
+
+    right: -45px;
+    bottom: 0;
+
+    opacity: 0.24;
+  }
+}
+
+/* =========================================================
+   PAPÁS V2 - RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+  .section-parents {
+    padding-top: 72px;
+    padding-bottom: 78px;
+  }
+
+  .parents-layout {
+    width: 100%;
+  }
+
+  .parents-names {
+    flex-direction: column;
+
+    gap: 0;
+
+    margin-top: 4px;
+
+    font-size: 2.3rem;
+  }
+
+  .parents-ampersand {
+    margin: 4px 0;
+
+    font-size: 1.8rem;
+  }
+
+  .parents-photo-area {
+    width: min(100%, 360px);
+
+    margin-top: 30px;
+  }
+
+  .parents-main-photo {
+    padding: 6px;
+
+    border-radius: 26px;
+  }
+
+  .parents-main-photo::before {
+    inset: 10px;
+
+    border-radius: 18px;
+  }
+
+  .parents-main-photo img {
+    border-radius: 20px;
+  }
+
+  .parents-bears-wrap {
+    width: min(100%, 260px);
+
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .parents-photo-area {
+    width: min(100%, 330px);
+  }
+
+  .parents-bears-wrap {
+    width: min(100%, 235px);
+  }
+
+  .parents-names {
+    font-size: 2.1rem;
+  }
+}
+
+/* =========================================================
+   DULCE ESPERA V2 - RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .sweetwait-layout {
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+
+    width: min(100%, 680px);
+  }
+
+  .sweetwait-copy {
+    order: 1;
+  }
+
+  .sweetwait-photo-area {
+    order: 2;
+  }
+
+  .sweetwait-balloons {
+    top: auto;
+    left: -90px;
+    bottom: 40px;
+
+    width: 280px;
+
+    transform: rotate(-8deg);
+
+    opacity: 0.18;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-sweet-wait {
+    padding-top: 72px;
+    padding-bottom: 150px;
+  }
+
+  .sweetwait-layout {
+    width: 100%;
+
+    gap: 32px;
+  }
+
+  .sweetwait-message {
+    font-size: 1.16rem;
+  }
+
+  .sweetwait-photo {
+    width: min(100%, 340px);
+
+    padding: 6px;
+
+    border-radius: 26px;
+  }
+
+  .sweetwait-photo::before {
+    inset: 10px;
+
+    border-radius: 18px;
+  }
+
+  .sweetwait-photo img {
+    border-radius: 20px;
+  }
+
+  .sweetwait-caption {
+    font-size: 2.1rem;
+  }
+
+  .sweetwait-balloons {
+    left: -45px;
+    bottom: 8px;
+
+    width: 210px;
+
+    opacity: 0.22;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-sweet-wait {
+    padding-bottom: 135px;
+  }
+
+  .sweetwait-photo {
+    width: min(100%, 315px);
+  }
+
+  .sweetwait-balloons {
+    left: -40px;
+
+    width: 190px;
+  }
+
+  .sweetwait-caption {
+    font-size: 1.95rem;
+  }
+}
+
+/* =========================================================
+   DULCE ESPERA V2.1 - RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .sweetwait-layout {
+    display: flex;
+    flex-direction: column;
+
+    width: min(100%, 680px);
+
+    gap: 0;
+  }
+
+  .sweetwait-copy,
+  .sweetwait-photo-area {
+    order: initial;
+  }
+
+  .sweetwait-photo-area {
+    margin-top: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-sweet-wait {
+    padding-top: 72px;
+    padding-bottom: 155px;
+  }
+
+  .sweetwait-layout {
+    width: 100%;
+  }
+
+  .sweetwait-photo-area {
+    width: 100%;
+
+    margin-top: 30px;
+  }
+
+  .sweetwait-photo {
+    width: min(100%, 340px);
+  }
+
+  .sweetwait-balloons {
+    left: -48px;
+    bottom: 5px;
+
+    width: 205px;
+
+    opacity: 0.22;
+  }
+}
+
+@media (max-width: 420px) {
+  .sweetwait-photo {
+    width: min(100%, 315px);
+  }
+
+  .sweetwait-balloons {
+    left: -42px;
+
+    width: 185px;
+  }
+}
+
+/* =========================================================
+   AJUSTE DE ESPACIO ENTRE PAPÁS Y DULCE ESPERA
+========================================================= */
+
+@media (max-width: 600px) {
+  .section-parents {
+    padding-bottom: 38px;
+  }
+
+  .section-sweet-wait {
+    padding-top: 42px;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-parents {
+    padding-bottom: 34px;
+  }
+
+  .section-sweet-wait {
+    padding-top: 38px;
+  }
+}
+
+/* =========================================================
+   CUENTA REGRESIVA V2 - RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .countdown {
+    grid-template-columns: repeat(2, 145px);
+
+    justify-content: center;
+
+    gap: 20px;
+  }
+
+  .countdown-balloons {
+    left: -100px;
+
+    width: 250px;
+  }
+
+  .countdown-clouds {
+    right: -140px;
+
+    width: 320px;
+  }
+}
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+  .section-countdown {
+    padding-top: 72px;
+    padding-bottom: 145px;
+  }
+
+  .countdown-container {
+    width: 100%;
+  }
+
+  .countdown-intro {
+    width: min(100%, 330px);
+
+    margin-bottom: 32px;
+
+    font-size: 1.16rem;
+  }
+
+  /* 2 x 2 */
+
+  .countdown {
+    grid-template-columns: repeat(2, 118px);
+
+    gap: 18px 20px;
+
+    width: auto;
+
+    justify-content: center;
+  }
+
+  .countdown-item {
+    width: 118px;
+    height: 118px;
+
+    padding: 12px;
+  }
+
+  .countdown-item::after {
+    top: 9px;
+
+    font-size: 0.62rem;
+  }
+
+  .countdown-item span {
+    margin-top: 8px;
+
+    font-size: 2.35rem;
+  }
+
+  .countdown-item small {
+    margin-top: 5px;
+
+    font-size: 0.61rem;
+  }
+
+  /* Fecha */
+
+  .countdown-date {
+    width: 160px;
+
+    margin-top: 36px;
+  }
+
+  .countdown-date-day {
+    font-size: 1.8rem;
+  }
+
+  .countdown-date strong {
+    font-size: 3rem;
+  }
+
+  /* Globos como cierre */
+
+  .countdown-balloons {
+    left: -42px;
+    bottom: 4px;
+
+    width: 190px;
+
+    opacity: 0.22;
+  }
+
+  /* Nubes superiores */
+
+  .countdown-clouds {
+    right: -125px;
+    top: 80px;
+
+    width: 260px;
+
+    opacity: 0.19;
+  }
+}
+
+/* =========================================================
+   CELULAR PEQUEÑO
+========================================================= */
+
+@media (max-width: 420px) {
+  .section-countdown {
+    padding-bottom: 130px;
+  }
+
+  .countdown {
+    grid-template-columns: repeat(2, 108px);
+
+    gap: 16px 18px;
+  }
+
+  .countdown-item {
+    width: 108px;
+    height: 108px;
+  }
+
+  .countdown-item span {
+    font-size: 2.1rem;
+  }
+
+  .countdown-balloons {
+    width: 175px;
+
+    left: -38px;
+  }
+}
+
+/* =========================================================
+   AJUSTE DE ESPACIO
+   DULCE ESPERA → CUENTA REGRESIVA
+========================================================= */
+
+@media (max-width: 600px) {
+  /* Reducir espacio al terminar Esperándote */
+
+  .section-sweet-wait {
+    padding-bottom: 85px;
+  }
+
+  /* Subir un poco los globos */
+
+  .sweetwait-balloons {
+    left: -42px;
+    bottom: -5px;
+
+    width: 170px;
+
+    opacity: 0.18;
+  }
+
+  /* Acercar la cuenta regresiva */
+
+  .section-countdown {
+    padding-top: 42px;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-sweet-wait {
+    padding-bottom: 75px;
+  }
+
+  .sweetwait-balloons {
+    left: -38px;
+    bottom: -4px;
+
+    width: 160px;
+  }
+
+  .section-countdown {
+    padding-top: 36px;
+  }
+}
+
+/* =========================================================
+   FECHA Y HORA V2 - RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+  .section-event {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
+  .event-layout {
+    width: 100%;
+  }
+
+  .event-intro {
+    width: min(100%, 330px);
+
+    margin-bottom: 30px;
+
+    font-size: 1.16rem;
+  }
+
+  /* Fecha */
+
+  .event-date-card {
+    width: min(100%, 320px);
+
+    padding: 24px 20px 22px;
+
+    border-radius: 26px;
+  }
+
+  .event-date-weekday {
+    font-size: 2.2rem;
+  }
+
+  .event-date-main {
+    gap: 14px;
+  }
+
+  .event-date-main strong {
+    padding: 0 16px;
+
+    font-size: 3.8rem;
+  }
+
+  .event-date-main strong::before,
+  .event-date-main strong::after {
+    height: 40px;
+  }
+
+  .event-month,
+  .event-year {
+    font-size: 0.7rem;
+  }
+
+  .event-date-full {
+    font-size: 1.05rem;
+  }
+
+  /* Hora */
+
+  .event-time-card {
+    width: min(100%, 250px);
+
+    padding: 22px 16px;
+  }
+
+  .event-time-card strong {
+    font-size: 2rem;
+  }
+
+  /* Mensaje */
+
+  .event-final-message {
+    margin-top: 24px;
+
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-event {
+    padding-top: 54px;
+    padding-bottom: 64px;
+  }
+
+  .event-date-card {
+    width: min(100%, 295px);
+  }
+
+  .event-date-main strong {
+    font-size: 3.55rem;
+  }
+}
+
+/* =========================================================
+   UBICACIÓN V2 - RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+  .section-location {
+    padding-top: 62px;
+    padding-bottom: 115px;
+  }
+
+  .location-layout {
+    width: 100%;
+  }
+
+  .location-intro {
+    width: min(100%, 330px);
+
+    margin-bottom: 28px;
+
+    font-size: 1.16rem;
+  }
+
+  /* Tarjeta */
+
+  .location-card-v2 {
+    width: min(100%, 340px);
+
+    padding: 32px 20px 30px;
+
+    border-radius: 28px;
+  }
+
+  .location-card-v2::before {
+    inset: 8px;
+
+    border-radius: 21px;
+  }
+
+  /* Lugar */
+
+  .location-card-v2 h3 {
+    font-size: 1.9rem;
+  }
+
+  /* Dirección */
+
+  .location-card-v2 address {
+    margin-bottom: 24px;
+
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  /* Botón */
+
+  .location-button {
+    width: min(100%, 220px);
+
+    min-width: 0;
+  }
+
+  /* Nota */
+
+  .location-note {
+    width: min(100%, 300px);
+
+    margin: 18px auto 0;
+
+    font-size: 0.95rem;
+  }
+
+  /* Decoración */
+
+  .location-decoration {
+    right: -105px;
+    bottom: -15px;
+
+    width: 250px;
+
+    opacity: 0.18;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-location {
+    padding-bottom: 105px;
+  }
+
+  .location-card-v2 {
+    width: min(100%, 315px);
+
+    padding: 30px 18px 28px;
+  }
+
+  .location-card-v2 h3 {
+    font-size: 1.8rem;
+  }
+
+  .location-decoration {
+    width: 225px;
+
+    right: -95px;
+  }
+}
+
+/* =========================================================
+   SISTEMA GLOBAL DE ESPACIADO - MÓVIL
+========================================================= */
+
+@media (max-width: 600px) {
+  :root {
+    --section-space-mobile: 42px;
+  }
+
+  .section-welcome,
+  .section-parents,
+  .section-sweet-wait,
+  .section-countdown,
+  .section-event,
+  .section-location,
+  .section-confirmation {
+    padding-top: var(--section-space-mobile);
+    padding-bottom: var(--section-space-mobile);
+  }
+
+  /* -----------------------------------------------
+     Excepciones decorativas
+  ------------------------------------------------ */
+
+  .section-welcome {
+    padding-bottom: 150px;
+  }
+
+  .section-sweet-wait {
+    padding-bottom: 80px;
+  }
+
+  .section-countdown {
+    padding-bottom: 115px;
+  }
+
+  .section-location {
+    padding-bottom: 100px;
+  }
+
+  /* Cierre */
+
+  .section-farewell {
+    padding-top: 55px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-welcome {
+    padding-bottom: 140px;
+  }
+
+  .section-sweet-wait {
+    padding-bottom: 72px;
+  }
+
+  .section-countdown {
+    padding-bottom: 105px;
+  }
+
+  .section-location {
+    padding-bottom: 92px;
+  }
+}
+
+/* =========================================================
+   CONFIRMACIÓN V2 - RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+  .confirmation-layout {
+    width: 100%;
+  }
+
+  .confirmation-intro {
+    width: min(100%, 330px);
+
+    margin-bottom: 28px;
+
+    font-size: 1.16rem;
+  }
+
+  /* Formulario */
+
+  .confirmation-form-v2 {
+    width: min(100%, 340px);
+
+    padding: 30px 20px;
+
+    border-radius: 28px;
+  }
+
+  .confirmation-form-v2::before {
+    inset: 8px;
+
+    border-radius: 21px;
+  }
+
+  .confirmation-form-v2 .form-group input[type="text"] {
+    height: 52px;
+  }
+
+  /* Contador */
+
+  .confirmation-form-v2 .guest-counter {
+    grid-template-columns:
+      54px
+      1fr
+      54px;
+  }
+
+  .confirmation-form-v2 .counter-button {
+    height: 52px;
+  }
+
+  /* Ayuda */
+
+  .confirmation-help {
+    width: min(100%, 310px);
+
+    font-size: 0.9rem;
+  }
+
+  /* Confirmación */
+
+  .confirmation-success-v2 {
+    width: min(100%, 340px);
+
+    padding: 30px 20px 24px;
+
+    border-radius: 28px;
+  }
+
+  .confirmation-success-v2 h3 {
+    font-size: 2.8rem;
+  }
+
+  .confirmation-success-v2 p {
+    font-size: 1.15rem;
+  }
+
+  .success-elephant {
+    width: min(100%, 180px);
+  }
+
+  /* Decoración */
+
+  .confirmation-decoration {
+    left: -95px;
+    bottom: -15px;
+
+    width: 220px;
+
+    opacity: 0.1;
+  }
+}
+
+@media (max-width: 420px) {
+  .confirmation-form-v2 {
+    width: min(100%, 315px);
+
+    padding: 28px 18px;
+  }
+
+  .confirmation-success-v2 {
+    width: min(100%, 315px);
+  }
+
+  .success-elephant {
+    width: 165px;
+  }
+}
+
+/* =========================================================
+   CIERRE FINAL V2 - RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+  .section-farewell {
+    min-height: auto;
+
+    padding-top: 55px;
+    padding-bottom: 70px;
+  }
+
+  .farewell-layout {
+    width: 100%;
+  }
+
+  .farewell-message {
+    width: min(100%, 330px);
+
+    font-size: 1.18rem;
+  }
+
+  .farewell-message-highlight {
+    width: min(100%, 330px);
+
+    font-size: 2.25rem;
+  }
+
+  .farewell-bears {
+    width: min(100%, 255px);
+
+    margin-top: 26px;
+  }
+
+  .farewell-signature {
+    margin-top: 20px;
+
+    font-size: 2.7rem;
+  }
+
+  .farewell-final {
+    font-size: 0.66rem;
+
+    letter-spacing: 0.18em;
+  }
+
+  .farewell-decoration {
+    right: -105px;
+    top: 15px;
+
+    width: 240px;
+
+    opacity: 0.09;
+  }
+}
+
+@media (max-width: 420px) {
+  .farewell-bears {
+    width: min(100%, 230px);
+  }
+
+  .farewell-message-highlight {
+    font-size: 2.1rem;
+  }
+
+  .farewell-signature {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .floating-item {
+    animation-duration: 7s;
+  }
+
+  .floating-item:nth-child(3),
+  .floating-item:nth-child(7),
+  .floating-item:nth-child(12) {
+    font-size: 1.15rem;
+  }
+}
