@@ -3548,3 +3548,16 @@ input:focus-visible {
   position: relative;
   z-index: 3;
 }
+
+.confirmation-deadline {
+  margin: 18px auto 28px;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.05rem;
+  color: var(--brown-600);
+}
+
+.confirmation-deadline strong {
+  color: var(--pink-600);
+  font-weight: 600;
+}

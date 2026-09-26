@@ -470,13 +470,13 @@ backend/Code.gs
 Las confirmaciones permanecerán abiertas durante todo el:
 
 ```text
-8 de noviembre de 2026
+25 de octubre de 2026
 ```
 
 El bloqueo comienza el:
 
 ```text
-9 de noviembre de 2026
+26 de octubre de 2026
 00:00 horas
 ```
 
