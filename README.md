@@ -740,10 +740,10 @@ GitHub Pages
 Cloudflare
 ```
 
-Dominio previsto:
+Dominio de produción:
 
 ```text
-babymelody.momentosvr.com.mx
+https://babyshowermelody.momentosvr.com.mx
 ```
 
 ---
@@ -838,14 +838,15 @@ Seguridad básica de Sheets     ✅
 Open Graph / WhatsApp          ✅
 Backend local                  ✅
 Pruebas funcionales            ✅
-```
+Publicación en GitHub          ✅
+GitHub Pages                   ✅
+Configuración de babyshowermelody.momentosvr.com.mx ✅
+ ```
 
 Pendiente:
 
 ```text
-Publicación en GitHub
-GitHub Pages
-Configuración de babymelody.momentosvr.com.mx
+
 Validación final de WhatsApp en producción
 ```
 
