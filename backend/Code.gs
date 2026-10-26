@@ -19,13 +19,13 @@ const MAX_GUESTS = 20;
 
 /*
  * Se permiten confirmaciones hasta el
- * domingo 25 de octubre de 2026.
+ * domingo 01 de noviembre de 2026.
  *
  * El bloqueo comienza:
- * 26 de octubre de 2026 a las 00:00.
+ * 01 de noviembre de 2026 a las 00:00.
  */
 
-const CONFIRMATION_DEADLINE = new Date("2026-10-26T00:00:00-06:00");
+const CONFIRMATION_DEADLINE = new Date("2026-11-02T00:00:00-06:00");
 
 const DEADLINE_MESSAGE = "El periodo de confirmación ha finalizado.";
 
